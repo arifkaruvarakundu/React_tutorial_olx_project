@@ -13,11 +13,11 @@ function App() {
   return (
     <div>
       <Router>
-        <Route path='/'>
-        <Home />
+        <Route exact path='/'>
+         <Home />
         </Route>
         <Route path='/signup'>
-        <Signup />
+         <Signup />
         </Route>
       </Router>
       
