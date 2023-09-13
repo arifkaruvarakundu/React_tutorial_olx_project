@@ -9,7 +9,8 @@ import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Create from './Pages/Create'
-
+import View from './Pages/ViewPost'
+import Post from './store/PostContext'
 
 function App() {
   const {setUser}=useContext(AuthContext)
@@ -21,6 +22,7 @@ function App() {
   })
   return (
     <div>
+<Post>    
       <Router>
         <Route exact path='/'>
          <Home />
@@ -34,8 +36,11 @@ function App() {
         <Route path='/create'>
          <Create />
         </Route>
+        <Route path='/view'>
+         <View />
+        </Route>
       </Router>
-      
+</Post>  
     </div>
   );
 }
